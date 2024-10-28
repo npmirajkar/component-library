@@ -1,0 +1,10 @@
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Banner Component Demo</title> <script type="module" src="/build/banner-lib.esm.js" data-stencil></script> <script nomodule="" src="/build/banner-lib.js" data-stencil></script> </head> <body> <my-banner slide-time="2000" messages="[&quot;Welcome to our site!&quot;, &quot;Check out our latest deals!&quot;, &quot;Free shipping on all orders!&quot;]"></my-banner> <script>
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  // auto-unregister service worker during dev mode
+  navigator.serviceWorker.getRegistration().then(function(registration) {
+    if (registration) {
+      registration.unregister().then(function() { location.reload(true) });
+    }
+  });
+}
+</script></body></html>
